@@ -6,7 +6,7 @@ import canswer from "./correctanswer.mp3";
 import wanswer from "./wronganswer.mp3";
 
 
-const Trivia = ({data,setStop,questionNumber,setQuestionNumber}) => {
+const Trivia = ({data,setStop,questionNumber,setQuestionNumber, setEarned}) => {
 
 
 const [question,setQuestion] = useState(null);
@@ -44,8 +44,18 @@ const handleClick = (a) =>{
     if(a.correct){
             correctanswer();
             delay(1000, ()=>{
-              setQuestionNumber((prev) => prev+1);
-                setSelectedAnswer(null)
+              if (questionNumber === data.length) {
+                // Last question answered correctly
+                setStop(true); // End the quiz
+                setEarned("₹ 1,00,00,000"); // Update earned amount
+                
+              }
+              else {
+                // Proceed to the next question
+                setQuestionNumber((prev) => prev + 1);
+                setSelectedAnswer(null);
+
+              }
             })
     
   } else{

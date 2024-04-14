@@ -118,7 +118,7 @@ const App = () => {
       },
 
       {
-        text:"3306",
+        text:"3306", 
         correct:false,
       },
       {
@@ -153,6 +153,222 @@ const App = () => {
       {
         text:"4",
         correct:false,
+      },
+    ],
+  },
+
+  {
+    id:7,
+    question:"What is JSX in React? ",
+    answers:[
+      {
+        text:" A styling language ",
+        correct:false,
+      },
+
+      {
+        text:"A templating engine",
+        correct:false,
+      },
+      {
+        text:" A syntax extension for JavaScript ",
+        correct:true,
+      },
+      {
+        text:" A state management library ",
+        correct:false,
+      },
+    ],
+  },
+
+  {
+    id:8,
+    question:"What is the purpose of the useState hook in React?",
+    answers:[
+      {
+        text:"Managing component state in functional components ",
+        correct:true,
+      },
+
+      {
+        text:"Fetching data from an API ",
+        correct:false,
+      },
+      {
+        text:" Defining global variables  ",
+        correct:false,
+      },
+      {
+        text:" Creating event listeners  ",
+        correct:false,
+      },
+    ],
+  },
+
+  {
+    id:9,
+    question:"In React, what does the term 'props' stand for? ",
+    answers:[
+      {
+        text:" Properties  ",
+        correct:true,
+      },
+
+      {
+        text:"Procedures",
+        correct:false,
+      },
+      {
+        text:" Prototypes",
+        correct:false,
+      },
+      {
+        text:" Parameters ",
+        correct:false,
+      },
+    ],
+  },
+
+  {
+    id:10,
+    question:"What is the purpose of the useEffect hook in React?  ",
+    answers:[
+      {
+        text:"  Managing component state  ",
+        correct:false,
+      },
+
+      {
+        text:"Performing side effects in functional components ",
+        correct:true,
+      },
+      {
+        text:"Handling HTTP requests  ",
+        correct:false,
+      },
+      {
+        text:"  Controlling rendering logic  ",
+        correct:false,
+      },
+    ],
+  },
+
+  {
+    id:11,
+    question:"What is Redux used for in a React application? ",
+    answers:[
+      {
+        text:"Styling and theming  ",
+        correct:false,
+      },
+
+      {
+        text:"Managing component state ",
+        correct:false,
+      },
+      {
+        text:" Handling asynchronous operations ",
+        correct:false,
+      },
+      {
+        text:" State management in a predictable way  ",
+        correct:true,
+      },
+    ],
+  },
+
+  {
+    id:12,
+    question:"How is data passed between React components?  ",
+    answers:[
+      {
+        text:" Using global variables  ",
+        correct:false,
+      },
+
+      {
+        text:"Through function parameters ",
+        correct:false,
+      },
+      {
+        text:" Via HTTP requests  ",
+        correct:false,
+      },
+      {
+        text:" Using props  ",
+        correct:true,
+      },
+    ],
+  },
+
+  {
+    id:13,
+    question:"What is the purpose of React Components? ",
+    answers:[
+      {
+        text:"Managing database connections ",
+        correct:false,
+      },
+
+      {
+        text:"Handling server-side logic ",
+        correct:false,
+      },
+      {
+        text:" Building user interfaces into reusable pieces  ",
+        correct:true,
+      },
+      {
+        text:" Controlling browser settings  ",
+        correct:false,
+      },
+    ],
+  },
+
+  {
+    id:14,
+    question:"What is the significance of the React.Fragment in React?  ",
+    answers:[
+      {
+        text:"A state management library ",
+        correct:false,
+      },
+
+      {
+        text:"A wrapper for functional components ",
+        correct:false,
+      },
+      {
+        text:" A placeholder for async operations  ",
+        correct:false,
+      },
+      {
+        text:"A wrapper to group multiple elements without adding an extra node to the DOM ",
+        correct:true,
+      },
+    ],
+  },
+
+  {
+    id:15,
+    question:"What tool does React use to compile JSX? ",
+    answers:[
+      {
+        text:" ReactDOM  ",
+        correct:false,
+      },
+
+      {
+        text:"JSX Compiler",
+        correct:false,
+      },
+      {
+        text:"React Router ",
+        correct:false,
+      },
+      {
+        text:"Babel  ",
+        correct:true,
       },
     ],
   },
@@ -208,7 +424,8 @@ const App = () => {
             <Trivia data = {data} 
             setStop={setStop}
             questionNumber={questionNumber}
-            setQuestionNumber={setQuestionNumber}/>
+            setQuestionNumber={setQuestionNumber}
+            setEarned = {setEarned}/>
             </div>
             </>
 )}

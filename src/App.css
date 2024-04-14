@@ -3,6 +3,7 @@
     display:flex;
     background-color: #020230;
     color: white;
+    background-size: cover;
 }
 
 .main{
@@ -11,6 +12,7 @@
      url("https://res.cloudinary.com/doqm5spnb/image/upload/v1669808921/millionaire02a_m4jhgu.jpg") center;
      display: flex;
      flex-direction: column;
+     background-size: cover;
 }
 .top{
     height:50%;
@@ -211,3 +213,14 @@ font-weight: 500;
     font-size: 18px;
     font-weight: 500;
 }
+
+@media (max-width: 768px) {
+    .moneylist {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .moneyListitem {
+      margin: 5px;
+    }
+  }
